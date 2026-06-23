@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SHI Yawen | Resume</title>
+<style>
+:root,[data-theme="light"]{--bg:#F5F3F0;--surface:#FFFFFF;--surface2:#EDEBE6;--text:#1E1C18;--text-muted:#6B6962;--text-faint:#AEABA2;--primary:#1B2A4A;--primary-light:#2C4068;--primary-soft:rgba(27,42,74,0.06);--border:rgba(30,28,24,0.08);--shadow:0 2px 12px rgba(30,28,24,0.06);--shadow-hover:0 8px 30px rgba(30,28,24,0.1)}
+[data-theme="dark"]{--bg:#141820;--surface:#1C212B;--surface2:#242A36;--text:#C8CDD6;--text-muted:#6E7480;--text-faint:#4A505C;--primary:#5A7FBA;--primary-light:#7A9FD4;--primary-soft:rgba(90,127,186,0.1);--border:rgba(200,205,214,0.06);--shadow:0 2px 12px rgba(0,0,0,0.2);--shadow-hover:0 8px 30px rgba(0,0,0,0.3)}
+@media(prefers-color-scheme:dark){:root:not([data-theme]){--bg:#141820;--surface:#1C212B;--surface2:#242A36;--text:#C8CDD6;--text-muted:#6E7480;--text-faint:#4A505C;--primary:#5A7FBA;--primary-light:#7A9FD4;--primary-soft:rgba(90,127,186,0.1);--border:rgba(200,205,214,0.06);--shadow:0 2px 12px rgba(0,0,0,0.2);--shadow-hover:0 8px 30px rgba(0,0,0,0.3)}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Noto Sans SC','Microsoft YaHei','Helvetica Neue',sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:var(--bg);transition:background .25s,color .25s}
+a{color:var(--primary);text-decoration:none;transition:color .2s}
+a:hover{color:var(--primary-light)}
+h1,h2,h3,h4{font-weight:600;line-height:1.3;color:var(--text)}
+button{cursor:pointer;background:none;border:none;font:inherit;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+@media(max-width:768px){.container{padding:0 20px}}
+.section{padding:80px 0}
+@media(max-width:768px){.section{padding:48px 0}}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,243,239,0.85);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:background .25s}
+[data-theme="dark"] .header{background:rgba(22,21,18,0.85)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:0 24px;height:68px}
+.header__logo{font-size:18px;font-weight:700;color:var(--text);letter-spacing:-0.3px}
+.header__logo span{color:var(--primary)}
+.header__nav{display:flex;align-items:center;gap:4px}
+.header__nav a{padding:6px 14px;font-size:14px;font-weight:500;color:var(--text-muted);border-radius:8px;transition:all .2s;text-decoration:none}
+.header__nav a:hover,.header__nav a.active{color:var(--text);background:var(--primary-soft)}
+.header__actions{display:flex;align-items:center;gap:6px}
+.lang-toggle{display:flex;background:var(--primary-soft);border-radius:8px;overflow:hidden}
+.lang-toggle button{padding:4px 10px;font-size:13px;font-weight:600;color:var(--text-muted);transition:all .2s;line-height:1.4}
+.lang-toggle button.active{background:var(--primary);color:#fff}
+.lang-toggle button:not(.active):hover{color:var(--text)}
+[data-theme="dark"] .lang-toggle button.active{color:#161512}
+.theme-btn,.menu-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;color:var(--text-muted);transition:all .2s;background:transparent}
+.theme-btn:hover,.menu-btn:hover{background:var(--primary-soft);color:var(--text)}
+.theme-btn svg,.menu-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.menu-btn{display:none}
+.sun{display:none}[data-theme="dark"] .sun{display:block}[data-theme="dark"] .moon{display:none}
+@media(max-width:768px){.menu-btn{display:flex}.header__nav{position:fixed;top:68px;left:0;right:0;bottom:0;background:rgba(245,243,239,0.98);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);flex-direction:column;align-items:stretch;gap:0;padding:16px;opacity:0;pointer-events:none;transition:opacity .3s}[data-theme="dark"] .header__nav{background:rgba(22,21,18,0.98)}.header__nav.open{opacity:1;pointer-events:all}.header__nav a{font-size:16px;padding:14px 16px;border-bottom:1px solid var(--border)}}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:68px}
+.hero::before{content:"";position:absolute;top:-50%;right:-30%;width:80%;height:150%;background:radial-gradient(ellipse at center,rgba(27,42,74,0.06) 0%,transparent 60%);pointer-events:none}
+[data-theme="dark"] .hero::before{background:radial-gradient(ellipse at center,rgba(90,127,186,0.08) 0%,transparent 60%)}
+.hero::after{content:"";position:absolute;bottom:-20%;left:-10%;width:60%;height:100%;background:radial-gradient(ellipse at center,rgba(27,42,74,0.04) 0%,transparent 50%);pointer-events:none}
+[data-theme="dark"] .hero::after{background:radial-gradient(ellipse at center,rgba(90,127,186,0.05) 0%,transparent 50%)}
+.hero__inner{position:relative;z-index:1;width:100%}
+.hero__tag{display:inline-block;padding:6px 16px;font-size:13px;font-weight:500;color:var(--primary);background:var(--primary-soft);border-radius:20px;margin-bottom:24px;letter-spacing:0.5px}
+.hero__inner{display:flex;align-items:center;gap:48px}
+.hero__photo{flex-shrink:0;width:200px;height:200px;border-radius:50%;overflow:hidden;border:4px solid var(--primary-soft);box-shadow:0 4px 20px rgba(0,0,0,0.08);transition:all .3s}
+.hero__photo:hover{box-shadow:0 8px 30px rgba(0,0,0,0.15);transform:scale(1.02)}
+.hero__photo img{width:100%;height:100%;object-fit:cover}
+@media(max-width:768px){.hero__inner{flex-direction:column;text-align:center;gap:24px}.hero__photo{width:160px;height:160px}}
+.hero__name-cn{font-size:clamp(36px,5vw,52px);font-weight:700;color:var(--text);margin-bottom:4px;letter-spacing:-1px}
+.hero__name-en{font-size:clamp(18px,2.5vw,24px);font-weight:400;color:var(--text-muted);margin-bottom:20px}
+.hero__title{font-size:clamp(15px,1.8vw,17px);color:var(--text-muted);line-height:1.8;margin-bottom:32px;max-width:600px}
+.hero__actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;font-size:14px;font-weight:500;border-radius:10px;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-light);color:#fff}
+.btn-outline{background:transparent;color:var(--primary);border:1px solid var(--border)}
+.btn-outline:hover{background:var(--primary-soft);border-color:var(--primary);color:var(--primary)}
+.hero__wechat{display:flex;flex-direction:column;align-items:center;gap:4px}
+.hero__wechat{align-items:center;justify-content:center}
+.hero__wechat-qr{width:72px;height:72px;border-radius:10px;overflow:hidden;border:1px solid var(--border);transition:all .3s ease;cursor:pointer}
+.hero__wechat-qr:hover{box-shadow:var(--shadow-hover);transform:scale(1.15)}
+.hero__wechat-qr img{width:100%;height:100%;object-fit:cover}
+.hero__wechat-label{font-size:11px;color:var(--text-muted)}
+.section-title{font-size:clamp(22px,2.8vw,30px);font-weight:700;margin-bottom:12px}
+.section-sub{font-size:14px;color:var(--text-muted);margin-bottom:40px}
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:var(--border)}
+.timeline-item{position:relative;padding-bottom:36px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-dot{position:absolute;left:-24px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--primary);border:3px solid var(--bg)}
+.timeline-date{font-size:13px;font-weight:600;color:var(--primary);margin-bottom:4px}
+.timeline-school{font-size:18px;font-weight:600;color:var(--text);margin-bottom:2px}
+.timeline-degree{font-size:14px;color:var(--text-muted);margin-bottom:6px}
+.timeline-detail{font-size:14px;color:var(--text-muted);line-height:1.7}
+.exp-cards{display:flex;flex-direction:column;gap:24px}
+.exp-card{padding:28px;border-radius:14px;background:var(--surface);border:1px solid var(--border);transition:all .25s}
+.exp-card:hover{box-shadow:var(--shadow-hover);border-color:rgba(27,42,74,0.2)}
+[data-theme="dark"] .exp-card:hover{border-color:rgba(90,127,186,0.3)}
+.exp-header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:4px}
+.exp-company{font-size:18px;font-weight:600;color:var(--text)}
+.exp-role{font-size:14px;color:var(--primary);font-weight:500;margin-bottom:2px}
+.exp-period{font-size:13px;color:var(--text-muted)}
+.exp-desc{font-size:14px;color:var(--text-muted);line-height:1.8;margin-top:12px}
+.exp-desc p{margin-bottom:10px}
+.exp-desc ul{padding-left:20px;margin-bottom:8px}
+.exp-desc li{margin-bottom:4px;list-style:disc}
+.exp-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.exp-links a{font-size:13px;font-weight:500;color:var(--primary);display:inline-flex;align-items:center;gap:4px;padding:4px 0}
+.exp-links a:hover{text-decoration:underline}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+@media(max-width:768px){.projects-grid{grid-template-columns:1fr}}
+.project-card{padding:24px;border-radius:14px;background:var(--surface);border:1px solid var(--border);display:flex;flex-direction:column;transition:all .25s}
+.project-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);border-color:rgba(27,42,74,0.2)}
+[data-theme="dark"] .project-card:hover{border-color:rgba(90,127,186,0.3)}
+.project-role{font-size:12px;font-weight:600;color:var(--primary);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.project-title{font-size:17px;font-weight:600;color:var(--text);margin-bottom:8px}
+.project-desc{font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:16px;flex:1}
+.project-footer{display:flex;flex-wrap:wrap;gap:8px;padding-top:12px;border-top:1px solid var(--border)}
+.project-link{font-size:13px;font-weight:500;color:var(--primary);display:inline-flex;align-items:center;gap:4px}
+.project-link:hover{text-decoration:underline}
+.pub-item{display:flex;gap:24px;padding:20px 24px;border-radius:12px;background:var(--surface);border:1px solid var(--border);transition:all .2s;margin-bottom:12px}
+.pub-item:hover{background:var(--surface2)}
+.pub-year{font-size:15px;font-weight:600;color:var(--primary);white-space:nowrap;min-width:50px;padding-top:1px}
+.pub-content{flex:1}
+.pub-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:2px}
+.pub-journal{font-size:13px;color:var(--text-muted);font-style:italic}
+.pub-link{font-size:13px;font-weight:500;color:var(--primary);margin-top:6px}
+.pub-link:hover{text-decoration:underline}
+.skills-section{display:flex;flex-direction:column;gap:28px}
+.skills-group-label{font-size:13px;font-weight:600;color:var(--text);margin-bottom:12px;letter-spacing:1px}
+.skills-tags{display:flex;flex-wrap:wrap;gap:8px}
+.skill-tag{padding:6px 16px;font-size:13px;font-weight:500;border-radius:20px;background:var(--primary-soft);color:var(--primary);border:1px solid transparent;transition:all .2s}
+.skill-tag:hover{background:var(--primary);color:#fff}
+[data-theme="dark"] .skill-tag:hover{color:#141820}
+.skill-card{padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--border);margin-top:16px}
+.skill-card-title{font-size:14px;font-weight:600;color:var(--primary);margin-bottom:12px;letter-spacing:0.5px;padding-bottom:8px;border-bottom:2px solid var(--primary-soft)}
+.skill-items{display:flex;flex-direction:column;gap:12px}
+.skill-item{}
+.skill-item-header{display:flex;align-items:center;gap:8px;margin-bottom:2px}
+.skill-item-name{font-size:14px;font-weight:600;color:var(--text)}
+.skill-item-badge{font-size:11px;font-weight:500;padding:2px 10px;border-radius:10px;background:var(--primary-soft);color:var(--primary);white-space:nowrap}
+.skill-item-desc{font-size:13px;color:var(--text-muted);line-height:1.6;padding-left:4px}
+.footer{padding:40px 0;text-align:center;font-size:13px;color:var(--text-faint);border-top:1px solid var(--border);margin-top:40px}
+@media(max-width:768px){.hero__actions{flex-direction:column;align-items:flex-start}.btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<header class="header" id="header">
+<div class="header__inner">
+<a href="#about" class="header__logo"><span data-i18n="logo">SHI Yawen</span></a>
+<nav class="header__nav" id="nav">
+<a href="#about" data-i18n="nav.about">About</a>
+<a href="#education" data-i18n="nav.education">Education</a>
+<a href="#experience" data-i18n="nav.experience">Experience</a>
+<a href="#projects" data-i18n="nav.projects">Projects</a>
+<a href="#publications" data-i18n="nav.publications">Publications</a>
+<a href="#skills" data-i18n="nav.skills">Skills</a>
+</nav>
+<div class="header__actions">
+
+<button class="theme-btn" id="themeToggle" aria-label="切换主题">
+<svg class="moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+<svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+</button>
+<button class="menu-btn" id="menuToggle" aria-label="菜单">
+<svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+
+<a href="index.html" style="font-size:13px;font-weight:600;padding:6px 12px;border-radius:8px;color:var(--text-muted)!important;text-decoration:none;background:var(--primary-soft);white-space:nowrap">中文</a></div>
+</div>
+</header>
+
+<section class="hero section" id="about">
+<div class="container">
+<div class="hero__inner">
+<div class="hero__photo"><img src="photo.jpg" alt="史雅文"></div>
+<div>
+<div class="hero__tag" data-i18n="hero.tag">Law · Entertainment · Project/Event Management</div>
+<h1 class="hero__name-cn" data-i18n="hero.name_cn">史雅文</h1>
+<p class="hero__name-en" data-i18n="hero.name_en">SHI Yawen</p>
+<p class="hero__title" data-i18n="hero.title">Juris Master | Licensed Chinese Attorney | 5+ Years in Executive Support, Conference Planning & Large-Scale Event Management at a Grade 4A Social Organization. Expert in drafting official documents, speeches, press releases & meeting minutes. Skilled in high-level reception, international travel management, cross-departmental coordination, and new media operations. Detail-oriented, compliance-driven, bilingual in Chinese and English.</p>
+<div class="hero__actions">
+<a href="mailto:shi.yawen@outlook.com" class="btn btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span data-i18n="hero.email_btn">Email Me</span></a>
+<a href="tel:+8618800142880" class="btn btn-outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-i18n="hero.phone_btn">Call Me</span></a>
+<div class="hero__wechat">
+<div class="hero__wechat-qr"><img src="wechat-qr.png" alt="微信二维码"></div>
+<span class="hero__wechat-label" data-i18n="hero.wechat_label">WeChat</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="education">
+<div class="container">
+<h2 class="section-title" data-i18n="education.heading">Education</h2>
+<p class="section-sub" data-i18n="education.sub">Education</p>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<p class="timeline-date">2016 – 2020</p>
+<p class="timeline-school" data-i18n="education.item1.school">China University of Political Science and Law (CUPL)</p>
+<p class="timeline-degree" data-i18n="education.item1.degree">Juris Master · LL.M.</p>
+<p class="timeline-detail" data-i18n="education.item1.detail">Vice President, Graduate Student Union — organized multiple academic exchange programs and cultural events; participated in Hong Kong exchange program; served as teaching assistant for international legal courses; multiple scholarship recipient; independently managed Graduate School WeChat account (content planning, editing, publishing).</p>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<p class="timeline-date">2009 – 2013</p>
+<p class="timeline-school" data-i18n="education.item2.school">Southwest University of Political Science and Law (SWUPL)</p>
+<p class="timeline-degree" data-i18n="education.item2.degree">LL.B. / B.A. in Literature (Dual Degree)</p>
+<p class="timeline-detail" data-i18n="education.item2.detail">Vice President, Student Union — organized multiple cultural events; recognized as University Outstanding Graduate; multiple scholarship recipient; 1st Prize in English Singing Competition, 3rd Prize in Hosting Competition.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="experience">
+<div class="container">
+<h2 class="section-title" data-i18n="experience.heading">Experience</h2>
+<p class="section-sub" data-i18n="experience.sub">Experience</p>
+<div class="exp-cards">
+
+<div class="exp-card">
+<div class="exp-header">
+<div>
+<p class="exp-company" data-i18n="exp.card1.company">Beijing Cultural Entertainment Law Society (Grade 4A)</p>
+<p class="exp-role" data-i18n="exp.card1.role">Executive Deputy Secretary-General</p>
+</div>
+<p class="exp-period" data-i18n="exp.card1.period">2020.06 – Present</p>
+</div>
+<div class="exp-desc">
+<p><b data-i18n="exp.card1.s1">Executive & Secretarial Support</b></p>
+<ul>
+<li data-i18n="exp.card1.s1a">Provided direct executive support to the President, Executive Vice President, and Council. Independently managed all high-level meetings including general assemblies and council sessions — from preparation and minutes drafting to resolution follow-up and closed-loop feedback.</li>
+<li data-i18n="exp.card1.s1b">Coordinated high-level reception, visits, and meetings including logistics and on-site management.</li>
+<li data-i18n="exp.card1.s1c">Established standardized meeting management protocols (pre-meeting preparation → on-site execution → post-meeting minutes & follow-up).</li>
+</ul>
+<p><b data-i18n="exp.card1.s2">Event Planning & Execution</b></p>
+<ul>
+<li data-i18n="exp.card1.s2a">Planned and executed 50+ industry forums, seminars, salons and roundtable discussions on cutting-edge topics including AI governance, AIGC compliance, platform liability, short video & webcasting, gaming overseas, film/TV copyright, music copyright and live streaming.</li>
+<li data-i18n="exp.card1.s2b">Led full-cycle planning and execution of major events including the Annual Awards Ceremony (200+ on-site, 2,000+ online) and the Qinglang Symposium (4 forums, 3 roundtables, 2 ceremonies over 2 days, ~1,000 participants). Served as Executive Lead and MC.</li>
+<li data-i18n="exp.card1.s2c">October 2023: Planned and directed the inaugural Arbitration Skills Training for the Cultural Entertainment Industry, a 3-day intensive program for 35 preselected professionals, co-organized with 4 arbitration commissions across China.</li>
+</ul>
+<p><b data-i18n="exp.card1.s3">Document Drafting & Editing</b></p>
+<ul>
+<li data-i18n="exp.card1.s3a">Independently drafted all event documents including proposals, speeches, scripts, press releases, meeting minutes, and official correspondence for all society events (forums, annual conferences, awards ceremonies, salons, seminars, training programs, etc.).</li>
+<li data-i18n="exp.card1.s3b">Single-handedly drafted the complete documentation package (18 items) for the General Assembly, including charter amendments, council work reports, and election procedures.</li>
+<li data-i18n="exp.card1.s3c">Compiled annual work summaries, work plans, progress reports, and grant applications for academic and public welfare projects.</li>
+<li data-i18n="exp.card1.s3d">Editor-in-Chief of the Entertainment Law Internal Reference (107 issues as of June 2026), overseeing topic selection and review.</li>
+</ul>
+<p><b data-i18n="exp.card1.s4">New Media & Public Relations</b></p>
+<ul>
+<li data-i18n="exp.card1.s4a">Managed daily operations of the society's WeChat public account and new media matrix — content strategy, editorial planning, review and publication approval.</li>
+<li data-i18n="exp.card1.s4b">Created and produced the interview series 'Let's Talk: Entertainment Law Elite,' surpassing 1 million views on Bilibili. Co-launched the documentary teaser 'Chinese Lawyers.'</li>
+</ul>
+<p><b data-i18n="exp.card1.s5">Membership & Committee Management</b></p>
+<ul>
+<li data-i18n="exp.card1.s5a">Coordinated daily communications, work tracking, and annual evaluations for 20+ specialized committees. Facilitated cross-committee collaboration and resource sharing.</li>
+<li data-i18n="exp.card1.s5b">Managed individual and corporate memberships including recruitment, rights maintenance, and information updates.</li>
+<li data-i18n="exp.card1.s5c">Led the design and launch of the member mini-program, achieving 1,000+ registered members and enabling digital membership services.</li>
+</ul>
+<p><b data-i18n="exp.card1.s6">Partnership & Resource Development</b></p>
+<ul>
+<li data-i18n="exp.card1.s6a">Maintained ongoing liaison with multiple arbitration commissions and judicial administrative bodies including BAC, GZAC, and XAC.</li>
+<li data-i18n="exp.card1.s6b">Established long-term partnerships with leading law schools including CUPL, PKU, THU, and CUC.</li>
+<li data-i18n="exp.card1.s6c">Facilitated collaboration with leading entertainment and tech companies including Tencent, ByteDance, Baidu, and more.</li>
+<li data-i18n="exp.card1.s6d">Connected with legal knowledge platforms (PKULaw, Wolters Kluwer) and publishing houses to co-publish industry reports and publications.</li>
+<li data-i18n="exp.card1.s6e">Built and maintained a core expert network of 100+ corporate legal heads, law firm partners, and academics.</li>
+</ul>
+<p><b data-i18n="exp.card1.s7">Travel & Logistics Management</b></p>
+<ul>
+<li data-i18n="exp.card1.s7a">Independently planned and executed the annual committee work meeting (2-day suburban retreat) including venue, transportation, dining, and budget management.</li>
+<li data-i18n="exp.card1.s7b">Managed the reception for visiting Changsha Arbitration Commission delegates including vehicle dispatch, visit coordination, and on-site support.</li>
+</ul>
+</div>
+<div class="exp-links">
+<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUzOTg5NDA3MA==&action=getalbum&album_id=1856958173211852806" target="_blank" rel="noopener"><span data-i18n="exp.card1.link1">WeChat Channel</span></a>
+<a href="https://mp.weixin.qq.com/s/4eixKiwzNjvBA44rq7Og8Q" target="_blank" rel="noopener"><span data-i18n="exp.card1.link2">Qinglang Symposium</span></a>
+<a href="https://mp.weixin.qq.com/s/udh-mtCT0QaoXFd74z6XQg" target="_blank" rel="noopener"><span data-i18n="exp.card1.link3">General Assembly</span></a>
+<a href="https://mp.weixin.qq.com/s/TeLs85cOAyLSy2q1r58apg" target="_blank" rel="noopener"><span data-i18n="exp.card1.link4">Mini Program Launch</span></a>
+<a href="https://mp.weixin.qq.com/s/WGkhiX_Z8xYWe3wpup1b3A" target="_blank" rel="noopener"><span data-i18n="exp.card1.link5">Committee Meeting I</span></a>
+<a href="https://mp.weixin.qq.com/s/fd_Wcgk5oy8lOljdbt1rCQ" target="_blank" rel="noopener"><span data-i18n="exp.card1.link6">Committee Meeting II</span></a>
+<a href="https://mp.weixin.qq.com/s/jT_Hz_U_9EqYoeCCelX7ww" target="_blank" rel="noopener"><span data-i18n="exp.card1.link7">Changsha Arbitration Visit</span></a>
+</div>
+</div>
+
+<div class="exp-card">
+<div class="exp-header">
+<div>
+<p class="exp-company" data-i18n="exp.card2.company">Confucius Institute (UK / Poland)</p>
+<p class="exp-role" data-i18n="exp.card2.role">Chinese Language Teacher</p>
+</div>
+<p class="exp-period" data-i18n="exp.card2.period">2017.05 – 2018.03 / 2023.11 – 2025.08</p>
+</div>
+<div class="exp-desc">
+<ul>
+<li data-i18n="exp.card2.d1">Delivered Chinese language instruction to primary, secondary, university and adult learners across multiple proficiency levels. Proficient in the full HSK and YCT examination systems.</li>
+<li data-i18n="exp.card2.d2">Planned and organized cross-cultural events — Spring Festival Gala, Mid-Autumn Festival celebrations and more — each attracting 100-300 participants.</li>
+<li data-i18n="exp.card2.d3">Independently managed all international travel logistics including flights, accommodation, visas, and itinerary planning.</li>
+</ul>
+</div>
+</div>
+
+<div class="exp-card">
+<div class="exp-header">
+<div>
+<p class="exp-company" data-i18n="exp.card3.company">LSAT Prep / Shandong Zhongfang Fund / New Channel</p>
+<p class="exp-role" data-i18n="exp.card3.role">English Instructor / Coordinator / Teaching Assistant</p>
+</div>
+<p class="exp-period" data-i18n="exp.card3.period">2013.07 – 2016.08</p>
+</div>
+<div class="exp-desc">
+<ul>
+<li data-i18n="exp.card3.d1">Worked as a part-time English instructor while preparing for the China University of Political Science and Law Juris Master entrance exam.</li>
+<li data-i18n="exp.card3.d2">Shandong Zhongfang Company | Coordinator: Responsible for promotional materials, event planning, and internal document management.</li>
+<li data-i18n="exp.card3.d3">Jinan New Channel English Training | Teaching Assistant: Assisted lead instructors with course preparation and classroom management. Tracked student progress and communicated with parents.</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="projects">
+<div class="container">
+<h2 class="section-title" data-i18n="projects.heading">Projects</h2>
+<p class="section-sub" data-i18n="projects.sub">Projects</p>
+<div class="projects-grid">
+
+<div class="project-card">
+<p class="project-role" data-i18n="proj.card1.role">Lead Organizer / MC</p>
+<p class="project-title" data-i18n="proj.card1.title">Hengjian Awards Ceremony</p>
+<p class="project-desc" data-i18n="proj.card1.desc">Planned and executed the annual awards ceremony with 200+ on-site and 2,000+ online participants. Served as MC and authored all event materials including speeches, scripts and press releases.</p>
+<div class="project-footer">
+<a href="https://mp.weixin.qq.com/s/5rCXP-1o3sVxP9WqtdiwhQ" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card1.link">Hengjian·Sihui</span></a>
+<a href="https://mp.weixin.qq.com/s/_yYnS84U2K1r_4b7xezbEA" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card1.link2">Hengjian·Coordinate</span></a>
+<a href="https://mp.weixin.qq.com/s/MWw3UysnQoZSJR4rUB2uxg" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card1.link3">Hengjian·Model (People)</span></a>
+<a href="https://mp.weixin.qq.com/s/6FHLc11IJCOgE_al-lRlyA" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card1.link4">Hengjian·Model (Organization)</span></a>
+<a href="https://mp.weixin.qq.com/s/OzB9-4d7H24t1rsLNncFBQ" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card1.link5">Ceremony Notice</span></a>
+<a href="https://mp.weixin.qq.com/s/OBqjQUYkkJmTfhxMtYGaGA" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card1.link6">Awards Ceremony Coverage</span></a>
+</div>
+</div>
+
+<div class="project-card">
+<p class="project-role" data-i18n="proj.card2.role">Lead Organizer / MC</p>
+<p class="project-title" data-i18n="proj.card2.title">2025 Annual Conference</p>
+<p class="project-desc" data-i18n="proj.card2.desc">Led full-cycle planning and execution of the annual conference. Served as MC.</p>
+<div class="project-footer">
+<a href="https://mp.weixin.qq.com/s/xCwo_pyoGGgtqXRpzbtaXQ" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card2.link">Conference Coverage</span></a>
+</div>
+</div>
+
+<div class="project-card">
+<p class="project-role" data-i18n="proj.card3.role">Executive Lead</p>
+<p class="project-title" data-i18n="proj.card3.title">Qinglang Symposium Series</p>
+<p class="project-desc" data-i18n="proj.card3.desc">Planned and executed a large-scale academic symposium: 4 parallel forums, 3 roundtables and 2 signing ceremonies over 2 days, drawing nearly 1,000 on-site participants. Coordinated cross-institutional collaboration with multiple arbitration commissions, law schools and corporate partners.</p>
+<div class="project-footer">
+<a href="https://mp.weixin.qq.com/s/K0dHkmvhKS0krnIT8uB5fw" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card3.link">Notice</span></a>
+<a href="https://mp.weixin.qq.com/s/oSL9FHJlqtMqg7M221tugQ" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card3.link2">Main Forum</span></a>
+<a href="https://mp.weixin.qq.com/s/qS-OHyfC9Aa9ABcmmN8vpQ" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card3.link3">Theme Forum I</span></a>
+<a href="https://mp.weixin.qq.com/s/jzo3pHkELlKv0E3S7UXtUg" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card3.link4">Theme Forum II</span></a>
+<a href="https://mp.weixin.qq.com/s/dIS1IhOhMJ3Xn81D66PCow" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card3.link5">Theme Forum III</span></a>
+<a href="https://mp.weixin.qq.com/s/4eixKiwzNjvBA44rq7Og8Q" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card3.link6">Event Coverage</span></a>
+</div>
+</div>
+
+<div class="project-card">
+<p class="project-role" data-i18n="proj.card4.role">Program Director</p>
+<p class="project-title" data-i18n="proj.card4.title">Arbitration Skills Training</p>
+<p class="project-desc" data-i18n="proj.card4.desc">Co-organized the inaugural Arbitration Skills Training with 4 arbitration commissions. Managed a 3-day intensive program for 35 professionals.</p>
+<div class="project-footer">
+<a href="https://mp.weixin.qq.com/s/flFrHWaerY6tGcIl-JBltw" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card4.link">Program Details</span></a>
+</div>
+</div>
+
+<div class="project-card">
+<p class="project-role" data-i18n="proj.card5.role">Producer / Creator</p>
+<p class="project-title" data-i18n="proj.card5.title">'Let's Talk: Entertainment Law Elite'</p>
+<p class="project-desc" data-i18n="proj.card5.desc">Created an entertainment law interview series surpassing 1 million views on Bilibili. Managed daily operations of WeChat account and new media matrix.</p>
+<div class="project-footer">
+<a href="https://space.bilibili.com/1043262554/upload/video" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card5.link">Bilibili Channel</span></a>
+</div>
+</div>
+
+<div class="project-card">
+<p class="project-role" data-i18n="proj.card6.role">Co-Producer</p>
+<p class="project-title" data-i18n="proj.card6.title">'Chinese Lawyers' Documentary</p>
+<p class="project-desc" data-i18n="proj.card6.desc">Produced by Beijing Cultural Entertainment Law Society, the documentary immerses viewers in the work and lives of lawyers, promoting positive legal industry energy and public legal education.</p>
+<div class="project-footer">
+<a href="https://mp.weixin.qq.com/s/g2n1WhEA09RlxP3WQbfXfw" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card6.link">Teaser I</span></a>
+<a href="https://mp.weixin.qq.com/s/GmLz0QouVeZiHuCgOJ3u_w" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card6.link2">Teaser II</span></a>
+<a href="https://mp.weixin.qq.com/s/U-9WgkwkEjdzNYbNEQQbfQ" target="_blank" rel="noopener" class="project-link"><span data-i18n="proj.card6.link3">Teaser III</span></a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="publications">
+<div class="container">
+<h2 class="section-title" data-i18n="pub.heading">Publications</h2>
+<p class="section-sub" data-i18n="pub.sub">Publications</p>
+<div>
+<div class="pub-item">
+<span class="pub-year">2026</span>
+<div class="pub-content">
+<p class="pub-title" data-i18n="pub.item1.title">Annual Report on China's Cultural Entertainment Rule of Law Development (2026)</p>
+<p class="pub-journal" data-i18n="pub.item1.journal">Peking University Press (2026) · Editorial Board Member — Responsible for planning and coordination.</p>
+</div>
+</div>
+<div class="pub-item">
+<span class="pub-year">2021</span>
+<div class="pub-content">
+<p class="pub-title" data-i18n="pub.item2.title">Belt and Road Countries: Trade Clearance Laws and Practices</p>
+<p class="pub-journal" data-i18n="pub.item2.journal">CUPL Press (2021) · Co-author — Authored chapters on Qatar and the UAE.</p>
+</div>
+</div>
+<div class="pub-item">
+<span class="pub-year">Present</span>
+<div class="pub-content">
+<p class="pub-title" data-i18n="pub.item3.title">Entertainment Law Internal Reference (Internal E-Journal)</p>
+<p class="pub-journal" data-i18n="pub.item3.journal">107 Issues (as of June 2026) · Editor-in-Chief · Internal e-journal, not a formal publication.</p>
+<a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUzOTg5NDA3MA==&action=getalbum&album_id=3019775184607789059" target="_blank" rel="noopener" class="pub-link"><span data-i18n="pub.link_text">Read More →</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="skills">
+<div class="container">
+<h2 class="section-title" data-i18n="skills.heading">Skills & Qualifications</h2>
+<p class="section-sub" data-i18n="skills.sub">Skills & Qualifications</p>
+<div class="skills-section">
+<div>
+<p class="skills-group-label" data-i18n="skills.g1">Professional Qualifications</p>
+<div class="skills-tags">
+<span class="skill-tag" data-i18n="sk.t1">Chinese Licensed Attorney</span>
+<span class="skill-tag" data-i18n="sk.t2">Legal Professional Qualification</span>
+<span class="skill-tag" data-i18n="sk.t3">Securities Qualification Certificate</span>
+<span class="skill-tag" data-i18n="sk.t4">Fund Qualification Certificate</span>
+</div>
+</div>
+<div>
+<p class="skills-group-label" data-i18n="skills.g2">Languages</p>
+<div class="skills-tags">
+<span class="skill-tag" data-i18n="sk.t5">Chinese (Native)</span>
+<span class="skill-tag" data-i18n="sk.t6">English (Fluent · IELTS 7.0)</span>
+<span class="skill-tag" data-i18n="sk.t7">Mandarin (Level 1B)</span>
+<span class="skill-tag" data-i18n="sk.t8">Intl Chinese Teacher Cert.</span>
+</div>
+</div>
+<div>
+<p class="skills-group-label" data-i18n="skills.g3">Software & Tools</p>
+<div class="skills-tags">
+<span class="skill-tag" data-i18n="sk.t9">MS Office (Word, Excel, PPT)</span>
+<span class="skill-tag" data-i18n="sk.t10">WeChat Official Account</span>
+<span class="skill-tag" data-i18n="sk.t11">CapCut</span>
+<span class="skill-tag" data-i18n="sk.t12">Canva</span>
+</div>
+</div>
+<div>
+        <div class="skill-card">
+<p class="skill-card-title" data-i18n="skills.g4">Core Competencies</p>
+<div class="skill-items">
+<div class="skill-item">
+<div class="skill-item-header"><span class="skill-item-name" data-i18n="sk.core1">Legal Compliance & Risk</span><span class="skill-item-badge" data-i18n="sk.core1b">Licensed Attorney</span></div>
+<p class="skill-item-desc" data-i18n="sk.core1d">Expertise in contract review, compliance risk identification, and legal document oversight. Capable of supporting legal risk management in daily operations and external collaborations.</p>
+</div>
+<div class="skill-item">
+<div class="skill-item-header"><span class="skill-item-name" data-i18n="sk.core2">Meeting Management</span><span class="skill-item-badge" data-i18n="sk.core2b">Full-Cycle</span></div>
+<p class="skill-item-desc" data-i18n="sk.core2d">Full-cycle meeting management including preparation, chairing, minutes, and follow-up. Experienced in on-site coordination and emergency handling for high-level closed-door meetings and large events.</p>
+</div>
+<div class="skill-item">
+<div class="skill-item-header"><span class="skill-item-name" data-i18n="sk.core3">Document Drafting</span><span class="skill-item-badge" data-i18n="sk.core3b">Professional</span></div>
+<p class="skill-item-desc" data-i18n="sk.core3d">Independently drafts speeches, press releases, meeting minutes, work reports, and other official documents.</p>
+</div>
+<div class="skill-item">
+<div class="skill-item-header"><span class="skill-item-name" data-i18n="sk.core4">New Media Operations</span><span class="skill-item-badge" data-i18n="sk.core4b">Content Strategy</span></div>
+<p class="skill-item-desc" data-i18n="sk.core4d">Proficient in managing WeChat and social media platforms. Capable of content planning and data analysis.</p>
+</div>
+<div class="skill-item">
+<div class="skill-item-header"><span class="skill-item-name" data-i18n="sk.core5">Event Planning</span><span class="skill-item-badge" data-i18n="sk.core5b">50+ Events</span></div>
+<p class="skill-item-desc" data-i18n="sk.core5d">Experienced in full-cycle planning and execution of 50+ industry forums and large-scale events.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<footer class="footer"><div class="container"><p data-i18n="footer.text">© 2026 SHI Yawen</p></div></footer>
+
+<script>
+// v=1782186645
+
+
+
+
+// Initialize language
+(function() {
+  var saved = null;
+  try { saved = localStorage.getItem("lang"); } catch(e) {}
+  })()
+
+function initTheme() {
+  try {
+    var h = document.documentElement;
+    var t = document.getElementById("themeToggle");
+    if (!t) return;
+    var sd = window.matchMedia("(prefers-color-scheme:dark)").matches;
+    var st = (function(){ try { return localStorage.getItem("theme"); } catch(e) { return null; } })();
+    var m = st || (sd ? "dark" : "light");
+    h.setAttribute("data-theme", m);
+    t.addEventListener("click", function() {
+      m = (m === "dark") ? "light" : "dark";
+      h.setAttribute("data-theme", m);
+      try { localStorage.setItem("theme", m); } catch(e) {}
+    });
+  } catch(e) {}
+}
+
+function initMenu() {
+  try {
+    var n = document.getElementById("nav");
+    var b = document.getElementById("menuToggle");
+    if (!n || !b) return;
+    b.addEventListener("click", function() { n.classList.toggle("open"); });
+    n.querySelectorAll("a").forEach(function(a) {
+      a.addEventListener("click", function() { n.classList.remove("open"); });
+    });
+  } catch(e) {}
+}
+
+function initScroll() {
+  try {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll("[data-reveal]").forEach(function(el) { observer.observe(el); });
+  } catch(e) {}
+}
+
+function initHeader() {
+  try {
+    var header = document.getElementById("header");
+    if (!header) return;
+    var ticking = false;
+    window.addEventListener("scroll", function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          header.classList.toggle("header--scrolled", window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  } catch(e) {}
+}
+
+function initNav() {
+  try {
+    var links = document.querySelectorAll(".header__nav a");
+    var sections = document.querySelectorAll("section[id]");
+    window.addEventListener("scroll", function() {
+      var current = "";
+      sections.forEach(function(s) {
+        if (window.scrollY >= s.offsetTop - 120) { current = s.id; }
+      });
+      links.forEach(function(a) {
+        a.classList.toggle("active", a.getAttribute("href") === ("#" + current));
+      });
+    });
+  } catch(e) {}
+}
+
+initTheme();
+initMenu();
+initScroll();
+initHeader();
+initNav();
+</script>
+</body>
+</html>
